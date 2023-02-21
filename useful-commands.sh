@@ -21,3 +21,7 @@ bash -c  "$(wget -qO- https://git.io/vQgMr)"
 # Terminal font = MesloLGS NF (set in terminal preferences)
 sudo bash -c "$(curl -LSs https://github.com/dfmgr/installer/raw/main/install.sh)"
 sudo fontmgr install MesloLGSNF
+
+# Set terminal to open in center of screen
+gsettings set org.gnome.mutter center-new-windows true
+# gsettings set org.gnome.mutter center-new-windows false # back to default
