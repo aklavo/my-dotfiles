@@ -1,3 +1,11 @@
+# install zsh
+sudo apt install zsh
+
+# switch shell to zsh
+chsh -s $(which zsh)
+
+# Log out and back in
+
 # oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
@@ -6,7 +14,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # p10k themes
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 # link files to cloned repo files
 ln -s workspace/MyLinuxEnv/.zshrc .zshrc
