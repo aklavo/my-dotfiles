@@ -76,9 +76,9 @@ git clone https://github.com/aklavo/MyLinuxEnv $HOME/workspace/MyLinuxEnv
 ```
 Then we link the remote files to my local files using the ln command:
 ```sh
-ln -s $HOME/workspace/MyLinuxEnv/.zshrc $HOME/.zshrc
-ln -s $HOME/workspace/MyLinuxEnv/.gitconfig $HOME/.gitconfig
-ln -s $HOME/workspace/MyLinuxEnv/.p10k.zsh $HOME/.p10k.zsh
+ln -s $HOME/workspace/my-dotfiles/.zshrc $HOME/.zshrc
+ln -s $HOME/workspace/my-dotfiles/.gitconfig $HOME/.gitconfig
+ln -s $HOME/workspace/my-dotfiles/.p10k.zsh $HOME/.p10k.zsh
 ```
 Now moving forward changes to these config files in this repo will get push down to my machine once my local repo is synced to this remote repo. 
 
