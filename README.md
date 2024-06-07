@@ -43,6 +43,14 @@ We're in a zsh shell now, but it's ugly. This first step to make it pretty is in
 ```
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
+Now lets get the cool fonts:
+```
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
+```
+Open *Terminal* → *Preferences* and click on the selected profile under *Profiles*. Check Custom font under *Text Appearance* and select `MesloLGS NF Regular`.
 ### 5. Install 1Password
 Add the key for th 1Password apt repository:
 ```
