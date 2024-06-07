@@ -49,8 +49,18 @@ wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20R
 wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
 wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
 wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
+
+mkdir -p $HOME/.local/share/fonts
+mv Meslo* $HOME/.local/share/fonts
 ```
-Open *Terminal* → *Preferences* and click on the selected profile under *Profiles*. Check Custom font under *Text Appearance* and select `MesloLGS NF Regular`.
+Open *Terminal* → *Preferences* and click on the selected profile under *Profiles*. Check Custom font under *Text Appearance* and select `MesloLGS NF Regular`.  
+Now for the cool stuff, powerlevel10k (a theme for zsh):
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+```
+
+
 ### 5. Install 1Password
 Add the key for th 1Password apt repository:
 ```
