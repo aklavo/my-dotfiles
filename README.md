@@ -39,7 +39,7 @@ chsh -s $(which zsh)
 To see the shell change you need to log out and log back in. 
 
 ### 4. Make ZSH Pretty
-We're in a zsh shell now, but it's ugly. This first step to make it pretty is install `oh-my-zsh`, which is a framework for managing your Zsh configuration.
+We're in a zsh shell now, but it's ugly. This first step to make it pretty is install `oh-my-zsh`, which is a framework for managing your Zsh configuration. It also comes with a bunch nice commands and aliases [OhMyZsh Cheatsheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet).
 ```
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
