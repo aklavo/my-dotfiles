@@ -82,13 +82,6 @@ ln -s $HOME/workspace/MyLinuxEnv/.p10k.zsh $HOME/.p10k.zsh
 ```
 Now moving forward changes to these config files in this repo will get push down to my machine once my local repo is synced to this remote repo. 
 
-### 5. 
-
-
-
-
-
-
 ### 5. Install 1Password
 Add the key for th 1Password apt repository:
 ```
