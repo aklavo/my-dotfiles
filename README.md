@@ -58,6 +58,17 @@ Now for the cool stuff, powerlevel10k (a theme for zsh):
 ```
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
+Now lets change the colors. This will run a terminal prompt, my Terminal color theme is Screry (234 as of the time I wrote this):
+```
+bash -c  "$(wget -qO- https://git.io/vQgMr)" 
+```
+Exit the terminal and open a new one to see the changes. 
+
+
+
+
+
+
 
 
 ### 5. Install 1Password
