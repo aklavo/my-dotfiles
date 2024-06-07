@@ -56,8 +56,7 @@ mv Meslo* $HOME/.local/share/fonts
 Open *Terminal* → *Preferences* and click on the selected profile under *Profiles*. Check Custom font under *Text Appearance* and select `MesloLGS NF Regular`.  
 Now for the cool stuff, powerlevel10k (a theme for zsh):
 ```
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
 
