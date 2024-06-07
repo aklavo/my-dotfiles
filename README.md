@@ -68,7 +68,19 @@ Lastly set the terminal to open in center of screen.
 gsettings set org.gnome.mutter center-new-windows true
 ```
 
-### 4. Link .zshrc
+### 4. Link .dotfiles from this repo
+First we need to clone this repo onto our machine:
+```sh
+mkdir -p ~/workspace
+git clone https://github.com/aklavo/MyLinuxEnv $HOME/workspace/MyLinuxEnv
+```
+Then we link the remote files to my local files using the ln command:
+```sh
+ln -s $HOME/workspace/MyLinuxEnv/.zshrc $HOME/.zshrc
+ln -s $HOME/workspace/MyLinuxEnv/.gitconfig $HOME/.gitconfig
+ln -s $HOME/workspace/MyLinuxEnv/.p10k.zsh $HOME/.p10k.zsh
+```
+Now moving forward changes to these config files in this repo will get push down to my machine once my local repo is synced to this remote repo. 
 
 ### 5. 
 
