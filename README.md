@@ -37,3 +37,9 @@ Next we need to swith our shell from bash to our newly installed zsh by running 
 chsh -s $(which zsh)
 ```
 To see the shell change you need to log out and log back in. 
+
+### 4. Make ZSH Pretty
+We're in a zsh shell now, but it's ugly. This first step to make it pretty is install `oh-my-zsh`, which is a framework for managing your Zsh configuration.
+```
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+```
