@@ -2,7 +2,7 @@
 Starting from a fresh install of Ubuntu these are the necessary steps and commands to setup my development enviorment. 
 
 ### 1. Basic Installs
-Everything is a file! Anytime I install something I'm merely copying files from a remote location onto my local machine via a command in my terminal. The first two software packages I'll need are `git` and `curl`. These packages include commands necessary for me to install additional packages later.  
+Everything is a file! Anytime I install something I'm merely copying files from a remote location onto my local machine via a command in my terminal. The first two software packages I'll need are `git` and `curl`. These packages include commands necessary for me to install additional packages later. The `-y` option automatically answer `yes`  upon the *Do you want to continue [y/N]?* confirmation dialog.
 To install these packages run:  
 ```
 sudo apt install -y git curl
@@ -25,10 +25,15 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] http
 
 sudo apt update
 
-sudo apt install brave-browser
+sudo apt -y install brave-browser
 ```
 ### 3. Get ZSH
 Next lets install zsh or zshell, because it lets us install cool plugins and themes. 
 ```
-sudo apt install zsh
+sudo apt -y install zsh
 ```
+Next we need to swith our shell from bash to our newly installed zsh by running the change shell command with `-s` and the name of our shell. 
+```
+chsh -s $(which zsh)
+```
+To see the shell change you need to log out and log back in. 
