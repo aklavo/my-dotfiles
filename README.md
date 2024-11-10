@@ -36,7 +36,28 @@ Next we need to swith our shell from bash to our newly installed zsh by running 
 ```sh
 chsh -s $(which zsh)
 ```
-To see the shell change you need to log out and log back in. 
+To see the shell change you need to log out and log back in.
+ 
+### 3. Install 1Password
+Add the key for the 1Password apt repository:
+```
+curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
+```
+Add the 1Password apt repository:
+```
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/amd64 stable main' | sudo tee /etc/apt/sources.list.d/1password.list
+```
+Add the debsig-verify policy:
+```
+sudo mkdir -p /etc/debsig/policies/AC2D62742012EA22/
+curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol | sudo tee /etc/debsig/policies/AC2D62742012EA22/1password.pol
+sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
+curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
+```
+Install 1Password:
+```
+sudo apt update && sudo apt install 1password
+```
 
 ### 4. Make ZSH Pretty
 We're in a zsh shell now, but it's ugly. This first step to make it pretty is install `oh-my-zsh`, which is a framework for managing your Zsh configuration. It also comes with a bunch nice commands and aliases [OhMyZsh Cheatsheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet).
@@ -72,7 +93,7 @@ gsettings set org.gnome.mutter center-new-windows true
 First we need to clone this repo onto our machine:
 ```sh
 mkdir -p ~/workspace
-git clone https://github.com/aklavo/MyLinuxEnv $HOME/workspace/MyLinuxEnv
+git clone git@github.com:aklavo/my-dotfiles.git $HOME/workspace/my-dotfiles
 ```
 Then we link the remote files to my local files using the ln command:
 ```sh
@@ -82,23 +103,3 @@ ln -s $HOME/workspace/my-dotfiles/.p10k.zsh $HOME/.p10k.zsh
 ```
 Now moving forward changes to these config files in this repo will get push down to my machine once my local repo is synced to this remote repo. 
 
-### 5. Install 1Password
-Add the key for th 1Password apt repository:
-```
-curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
-```
-Add the 1Password apt repository:
-```
-echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/amd64 stable main' | sudo tee /etc/apt/sources.list.d/1password.list
-```
-Add the debsig-verify policy:
-```
-sudo mkdir -p /etc/debsig/policies/AC2D62742012EA22/
-curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol | sudo tee /etc/debsig/policies/AC2D62742012EA22/1password.pol
-sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
-curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
-```
-Install 1Password:
-```
-sudo apt update && sudo apt install 1password
-```
