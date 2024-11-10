@@ -27,18 +27,8 @@ sudo apt update
 
 sudo apt -y install brave-browser
 ```
-### 3. Get ZSH
-Next lets install zsh or zshell, because it lets us install cool plugins and themes. 
-```sh
-sudo apt -y install zsh
-```
-Next we need to swith our shell from bash to our newly installed zsh by running the change shell command with `-s` and the name of our shell. 
-```sh
-chsh -s $(which zsh)
-```
-To see the shell change you need to log out and log back in.
- 
-### 3. Install 1Password
+
+### 2. Install 1Password
 Add the key for the 1Password apt repository:
 ```
 curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
@@ -58,6 +48,16 @@ Install 1Password:
 ```
 sudo apt update && sudo apt install 1password
 ```
+### 3. Get ZSH
+Next lets install zsh or zshell, because it lets us install cool plugins and themes. 
+```sh
+sudo apt -y install zsh
+```
+Next we need to swith our shell from bash to our newly installed zsh by running the change shell command with `-s` and the name of our shell. 
+```sh
+chsh -s $(which zsh)
+```
+To see the shell change you need to log out and log back in.
 
 ### 4. Make ZSH Pretty
 We're in a zsh shell now, but it's ugly. This first step to make it pretty is install `oh-my-zsh`, which is a framework for managing your Zsh configuration. It also comes with a bunch nice commands and aliases [OhMyZsh Cheatsheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet).
@@ -89,7 +89,7 @@ Lastly set the terminal to open in center of screen.
 gsettings set org.gnome.mutter center-new-windows true
 ```
 
-### 4. Link .dotfiles from this repo
+### 5. Link .dotfiles from this repo
 First we need to clone this repo onto our machine:
 ```sh
 mkdir -p ~/workspace
