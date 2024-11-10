@@ -1,7 +1,7 @@
 [user]
         email = andrewklavo@gmail.com
         name = Andrew Klavekoske
-        signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFi7NLCYGunAvUlKNyWwUz23y8XG5L8OlWsNQ2N+E4zq
+        signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOCHVcmtZXKydhye6u3tuaxUYzsQFq4rHGgQuwf3LukU
 [gpg]
         format = ssh
 [gpg "ssh"]
